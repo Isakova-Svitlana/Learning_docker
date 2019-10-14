@@ -5,6 +5,10 @@ services:
           context: .
           dockerfile: Dockerfile
           target: moodlo
+       image: docker_moodlo
+       container_name: nginx_moodlo
+       ports: ["8081:8080"]
+
 
 
 

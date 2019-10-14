@@ -6,13 +6,21 @@ ENV MD_DOWNLOAD_URL https://download.moodle.org/stable${VERSION}/moodle-latest-$
 
 USER root 
 
-WORKDIR /tmp/
+WORKDIR /var/www/html/
 
 RUN apk --no-cache update && apk --no-cache upgrade && apk --no-cache add postgresql-client && apk --no-cache add tar &&\
     curl -o moodle.tgz -SL $MD_DOWNLOAD_URL &&\
-    echo "$MD_MD5 *moodle.tgz" | md5sum -c - \
-    && tar -xzf moodle.tgz -C /opt/ \
-    && rm moodle.tgz
+    echo "$MD_MD5 *moodle.tgz" | md5sum -c - &&\
+    tar -xzvf moodle.tgz -C /var/www/ &&\ 
+    tar -xzvf moodle.tgz -C /opt/  &&\
+    tar -xzvf moodle.tgz  &&\ 
+    tar -xzvf moodle.tgz -C /tmp/ 
+    #rm moodle.tgz  && \
+    #mv /opt/moodle/* /var/www/html/ &&\
+    #mkdir -p /var/www/html/moodledata &&\
+    #chown -R nginx:nginx /var/www/html/ &&\
+    #chmod -R 755 /var/www/html/ 
+
 
 
 
