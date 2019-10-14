@@ -1,0 +1,34 @@
+docker build --target img1 -t img1:alpine . && docker build --target img2 -t img2:alpine .
+
+docker run -ti -d -p 5432:5432  alpine
+docker run -it -d -p 5432:5432 8f4cf719cf42 sh
+docker run -d -i -p 5432:5432 caae95a91722 sh
+docker run -d -it f116af38ebdf /bin/sh
+ docker network create --driver bridge my_network
+ docker network ls
+ docker inspect my_network
+ docker-compose up -d
+
+alpine
+
+/ # ls -l
+total 60
+drwxr-xr-x    2 root     root          4096 Aug 20 10:30 bin
+drwxr-xr-x    5 root     root           360 Oct 12 07:04 dev
+drwxr-xr-x    1 root     root          4096 Oct 12 07:04 etc
+drwxr-xr-x    2 root     root          4096 Aug 20 10:30 home
+drwxr-xr-x    1 root     root          4096 Oct 12 06:54 img2
+drwxr-xr-x    5 root     root          4096 Aug 20 10:30 lib
+drwxr-xr-x    5 root     root          4096 Aug 20 10:30 media
+drwxr-xr-x    2 root     root          4096 Aug 20 10:30 mnt
+drwxr-xr-x    2 root     root          4096 Aug 20 10:30 opt
+dr-xr-xr-x  276 root     root             0 Oct 12 07:04 proc
+drwx------    1 root     root          4096 Oct 12 07:05 root
+drwxr-xr-x    2 root     root          4096 Aug 20 10:30 run
+drwxr-xr-x    2 root     root          4096 Aug 20 10:30 sbin
+drwxr-xr-x    2 root     root          4096 Aug 20 10:30 srv
+dr-xr-xr-x   13 root     root             0 Sep 25 08:05 sys
+drwxrwxrwt    2 root     root          4096 Aug 20 10:30 tmp
+drwxr-xr-x    7 root     root          4096 Aug 20 10:30 usr
+drwxr-xr-x   11 root     root          4096 Aug 20 10:30 var
+/ # apk

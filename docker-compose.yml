@@ -1,0 +1,37 @@
+version: "3.7"
+services:
+     moodlo:
+       build:
+          context: .
+          dockerfile: Dockerfile
+          target: moodlo
+
+
+
+
+
+
+#depends_on:
+#      - "postgredb"
+#links: postgredb
+#    command: database:5432
+#      command: 'nc -vz postgredb 5432'
+#    command: ["./postgresql_check.sh", "db:5432", "--", "python", "app.py"]
+
+#entrypoint: "./wait-for-it.sh db:5432"
+
+
+
+
+
+#   postgredb:
+#      build:
+#         context: .
+#         dockerfile: Dockerfile
+#         target: postgresdb
+#      image: docker_postgredb
+#      container_name: postgredb_moodle
+#      ports: 5432:5432
+#      tty: true
+#      stdin_open: true
+

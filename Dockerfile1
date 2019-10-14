@@ -1,0 +1,7 @@
+FROM alpine as img1
+WORKDIR ./img1
+RUN touch version 1
+
+FROM alpine as img2
+WORKDIR ./img2
+RUN touch version 2
